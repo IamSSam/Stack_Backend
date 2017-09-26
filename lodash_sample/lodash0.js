@@ -33,5 +33,3 @@ console.log(_.pick(obj1, ['name', 'phone']));
 
 /* merge() */
 console.log('MERGE()', _.merge(obj1, obj2));
-
-

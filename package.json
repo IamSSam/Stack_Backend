@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "node.js for backend studying",
+  "main": "bcrypt_sample.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IamSSam/Stack_Backend.git"
+  },
+  "author": "Eunsik Park",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IamSSam/Stack_Backend/issues"
+  },
+  "homepage": "https://github.com/IamSSam/Stack_Backend#readme",
+  "dependencies": {
+    "async": "^2.5.0",
+    "knex": "^0.13.0",
+    "lodash": "^4.17.4"
+  }
+}

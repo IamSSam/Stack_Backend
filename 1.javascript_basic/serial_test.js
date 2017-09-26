@@ -31,24 +31,55 @@ function not_good() {
     array = [a, b, c, d];
     for (var i = 0; i < array.length; i++) {
         console.log(i);
-        //array[i]();
+        array[i]();
     }
 }
 
-a(function() {
-    b();
-});
+function series(funcarr) {
+  var i = 0;
+  if(i < funcarr.length){
+    for(; i<funcarr.length; i++){
+      (function(j) {
+        funcarr[j]();
+      })(i);
+    }
+  }
+}
 
-a(function() {
-    b(function() {
-        c();
+function series(funcarr, i) {
+  if(i < funcarr.length){
+    funcarr[i](function() {
+      series(funcarr, i+1);
     })
-});
+  }
+}
 
-a(function() {
-    b(function() {
-        c(function() {
-            d();
-        });
-    });
-});
+
+series([a,b,c,d], 0);
+
+// a(function() {
+//     b();
+// });
+
+// a(function() {
+//     b(function() {
+//         c();
+//     })
+// });
+
+// a(function() {
+//     b(function() {
+//         c(function() {
+//             d();
+//         });
+//     });
+// });
+
+
+// a();
+// b();
+// c();
+// d();
+
+// javascript 함수는 항상 비동기적으로 실행된다.
+// javascript vm engine이 실행해준다.

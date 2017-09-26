@@ -44,7 +44,7 @@ q2.then(function(id) {
   .catch(function(err) {
     console.log(err);
   });
-  
+
 var q3 = knex.select().from('q3');
 /* 오류 케이스 생성 - 테이블 이름이 틀린 경우임 */
 q3.then(function(rows) {
